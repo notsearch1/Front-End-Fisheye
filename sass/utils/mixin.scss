@@ -1,0 +1,30 @@
+@mixin photograph-name($size){
+    color: $primary-color;
+    font-size: $size;
+}
+@mixin photograph-location{
+    font-size: 16px;
+    color: $secondary-color;
+}
+@mixin photograph-price{
+    font-size: 14px;
+    color:#757575;
+}
+@mixin filter($color){
+    font-size: 17px;
+    color:$color;
+    font-weight: bold;
+}
+
+@mixin btn{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color:$secondary-color;
+    border-radius: 5px;
+    cursor: pointer;
+}

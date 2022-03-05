@@ -1,0 +1,22 @@
+{
+  "name": "front-end-fisheye",
+  "version": "1.0.0",
+  "description": "Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notsearch1/Front-End-Fisheye.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notsearch1/Front-End-Fisheye/issues"
+  },
+  "homepage": "https://github.com/notsearch1/Front-End-Fisheye#readme",
+  "devDependencies": {
+    "eslint": "^8.8.0"
+  }
+}

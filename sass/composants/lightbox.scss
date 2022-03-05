@@ -1,0 +1,74 @@
+.lightbox-section{
+    z-index:3;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    &__btn-left, &__btn-right{
+        color:$secondary-color;
+        border:none;
+        font-size:48px;
+        background-color: transparent;
+        position:absolute;
+    }
+    &__btn-left{
+        top:50%;
+        left:35px;
+    }
+    &__btn-right{
+        top:50%;
+        right:35px;
+    }
+    &__wrapper{
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 100%;   
+    }
+    &__view{
+        margin:0 auto;
+            &__picture{
+                width: 600px;
+                height: 700px;
+                object-fit: cover;
+                margin:0 auto;
+            }
+        }
+    &__text{
+        margin-top: 12px;
+        color:$secondary-color;
+        font-size: 24px;
+        font-weight: 400;
+    }  
+}
+
+// croix fermeture lightbox
+.close{
+    cursor: pointer;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width:42px;
+    height:42px;
+        &__line1{
+            height:42px;
+            width:5px;
+            margin-left:12px;
+            background-color:$secondary-color;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            z-index:1;
+        }
+        &__line2{
+            height:42px;
+            width:5px;
+            background-color:$secondary-color;
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            z-index:2;
+        }
+}

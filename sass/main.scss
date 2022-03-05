@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+@import "./utils/variables.scss";
+@import "./utils/mixin.scss";
+@import "./composants/lightbox.scss";
+@import "./composants/form.scss";
+@import "./composants/filters.scss";
+@import "./layouts/header";
+@import "./page/home";
+@import "./page/photographer";

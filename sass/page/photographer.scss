@@ -1,0 +1,97 @@
+.photograph-header {
+    padding: 0 50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    height: 300px;
+    margin: 0 100px;
+        &__img{
+            height: 200px;
+            width: 200px;
+            border-radius:50%;
+            object-fit: cover;
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            &__heading{
+                @include photograph-name(64px);
+            }
+            &__location{
+                margin:20px 0;
+                font-size: 24px;
+                color: $secondary-color;
+            }
+            &__description{
+                font-size: 18px;
+            }
+        }
+        &__btn {
+            @include btn;
+        }
+        &__btn:hover{
+            background-color:$primary-color;
+            color:#000;
+        }
+}
+
+#media__wrapper{
+    margin:50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.media-article{
+    position:relative;
+    width: 350px;
+    margin:50px 0;
+    &__link{
+        cursor:pointer;
+    }
+    &__img{
+        object-fit: cover;
+       width: 100%;
+       height: 300px;
+       border-radius: 5%; 
+    }
+    &__heading{
+        color:$secondary-color;
+        margin:10px 0;
+        display: flex;
+        justify-content: space-between;
+        &__like{
+            color:$secondary-color;
+            margin-left: 5px;
+            cursor:pointer;
+        }
+    }
+    &__play{
+        color:rgba(255,255,255,0.7);
+        position:absolute;
+        top:120px;
+        left:145px;
+        font-size: 60px;
+    }
+}
+
+.reminder{
+    background-color: $primary-color;
+    display:flex;
+    justify-content: space-between;
+    width: 370px;
+    padding: 20px;
+    border-radius:5px 5px 0 0;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    position: fixed;
+    bottom:0;
+    right: 20px;
+    &__likes{
+        margin-left: 5px;
+    }
+}
+
+
