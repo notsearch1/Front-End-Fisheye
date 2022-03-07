@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <a href="index.html">
-        <img src="assets/images/logo/logo.png" class="header__logo" alt="Fisheye Home Page" />
+        <img src="assets/images/logo/logo.png" class="header__logo" alt="Fisheye Photographer page" />
       </a>
     </header>
     <main id="main">
@@ -22,14 +22,15 @@
       <!-- filtre -->
       <section class="filters">
         <label class="filters__heading" id="filter">Filtrer par</label>
-        <div class="filters__select" aria-haspopup="listbox">
-          <div class="filters__select__selectedField" role="button"  aria-expanded="true">
-            <p class="selectedFieldText" >Popularité</p>
+        <div class="filters__select" >
+          <div class="filters__select__selectedField" role="button" aria-haspopup="listbox" aria-labelledby="filter popularite">
+            <p class="selectedFieldText" id="popularite" >Popularité</p>
             <i class="fa-solid fa-angle-down"></i> 
           </div>
-          <ul class="filters__select__list">
-              <li id="date" class="filters__select__list__opt" role="option"  aria-selected="false" aria-labelledby="filter">Date</li>
-              <li id="titre" class="filters__select__list__opt" role="option" aria-selected="false" aria-labelledby="filter">Titre</li>
+          <ul class="filters__select__list" tabindex="-1"
+          role="listbox">
+              <li id="date" class="filters__select__list__opt" role="option" aria-labelledby="filter date">Date</li>
+              <li id="titre" class="filters__select__list__opt" role="option" aria-labelledby="filter titre">Titre</li>
           </ul>
         </div>
       </section>

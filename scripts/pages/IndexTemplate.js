@@ -4,7 +4,7 @@
 class Index{
 	constructor(){
 		this.photographersApi = new PhotographersApi('./../../data/photographers.json')
-		this.photographersSection = document.querySelector(".photographer_section")
+		this.photographersSection = document.querySelector(".photographer__section")
 
 	}
 

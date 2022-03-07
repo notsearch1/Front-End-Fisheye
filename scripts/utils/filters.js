@@ -24,12 +24,14 @@ for(option of options){
 	option.onclick = async function(){
 		let id=selectedFieldText.id
 		let text=selectedFieldText.textContent
+		selectedField.setAttribute('aria-labelledby', 'filter '+ this.id)
 		// remplace l'élèment en en tête par l'élèment cliqué
 		selectedFieldText.textContent= this.textContent
 		selectedFieldText.id=this.id
 		// remplace le texte de l'élément cliqué par celui de l'élement en entête
 		this.textContent = text
 		this.id=id
+		this.setAttribute('aria-labelledby', 'filter '+ id)
 		openFilters()
 		let medias= new PhotographersTemplate()
 		// relance la fonction du display des medias
@@ -45,7 +47,7 @@ async function searchFilter(){
 	// renvoie tous les médias pour le photographe demandé
 	let med= await template.getMediaByPhotographer()
 	switch(selectedFieldText.id){
-	case 'popularité': 
+	case 'popularite': 
 		return med.sort(function(a, b){return b.likes - a.likes})
 
 	case 'date':

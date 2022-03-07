@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable indent */
 /* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
@@ -35,23 +36,16 @@ class Lightbox{
 	// affichage de la 1ere vue cliquée
 	showMedia(idMedia, name){
 		this.currentMedia=this.getElementById(idMedia)
-		let srcMp4=this.currentMedia.video
-		let srcImg=this.currentMedia.image
 		let text= this.currentMedia.title
-		if(srcImg == undefined){
-			mp4.setAttribute('src', `assets/photographers/${name}/${srcMp4}`)
-			mp4.classList.add('lightbox-section__view__picture')
-			mp4.setAttribute('controls', '')
-			mp4.setAttribute('alt', text)
-			mp4.setAttribute('autoplay', '')
-			wrapper.insertBefore(mp4, textLightbox)
-		}else{
-			let img=document.createElement('img')
-			img.setAttribute('src', `assets/photographers/${name}/${srcImg}`)
-			img.classList.add('lightbox-section__view__picture')
-			img.setAttribute('alt', text)
-			wrapper.insertBefore(img, textLightbox)
+		const mediaDisplay= new MediaFactory(this.currentMedia, name)
+		const factory=mediaDisplay.display()
+		factory.classList.replace('media-article__img', 'lightbox-section__view__picture')
+		if(this.currentMedia.video != undefined){
+			factory.setAttribute('controls', '')
+			factory.setAttribute('alt', text)
+			factory.setAttribute('autoplay', '')
 		}
+		wrapper.insertBefore(factory, textLightbox)
 		document.querySelector('.lightbox-section__text').textContent=text
 	}
 	
