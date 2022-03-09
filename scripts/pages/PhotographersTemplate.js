@@ -6,8 +6,8 @@ class PhotographersTemplate{
 	constructor(){
 		this.photographHeader = document.getElementById('photograph-header')
 		this.btnContact = document.getElementById('contact_button')
-		this.photographersApi = new PhotographersApi('./data/photographers.json')
-		this.mediaApi = new MediaApi('./data/photographers.json')
+		this.photographersApi = new PhotographersApi('../../data/photographers.json')
+		this.mediaApi = new MediaApi('../../data/photographers.json')
 		this.position= window.location.href.indexOf('?')
 		this.getId= window.location.href.substring(this.position + 4)
 		this.sumLikes= 0
