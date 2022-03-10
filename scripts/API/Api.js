@@ -5,12 +5,14 @@ class Api {
 	}
 
 	async get() {
+		console.log(this._url)
 		return fetch(this._url)
 			.then(res => res.json())
 			.then(res => res.photographers)
 			.catch(err => console.log('an error occurs', err))
 	}
 	async getMedia() {
+		console.log(this._url)
 		return fetch(this._url)
 			.then(res => res.json())
 			.then(res => res.media)

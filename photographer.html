@@ -25,7 +25,7 @@
         <div class="filters__select" >
           <div class="filters__select__selectedField" role="button" aria-haspopup="listbox" aria-labelledby="filter popularite">
             <p class="selectedFieldText" id="popularite" >Popularité</p>
-            <i class="fa-solid fa-angle-down"></i> 
+            <span class="fa-solid fa-angle-down" role="button"></span> 
           </div>
           <ul class="filters__select__list" tabindex="-1"
           role="listbox">
@@ -42,7 +42,7 @@
       <aside class="reminder">
         <p class="reminder__likes">
           <span class="reminder__likes__data"></span>
-            <i class="fa-solid fa-heart" aria-label="likes"></i>
+            <span class="fa-solid fa-heart" aria-label="likes"></span>
         </p>
         <p class="reminder__price">
         </p>
@@ -79,13 +79,13 @@
           </div>
         </div>
       </div>
-      <button class="lightbox-section__btn-left" aria-label="previous view"><i class="fas fa-chevron-left"></i></button>
+      <button class="lightbox-section__btn-left" aria-label="next view"><span class="fas fa-chevron-left" role="button"></span></button>
       <div class="lightbox-section__wrapper" aria-label="image closeup view">
         <div class="lightbox-section__view">
           <p class="lightbox-section__text"></p>
         </div>
       </div>
-      <button class="lightbox-section__btn-right" aria-label="next view"><i class="fas fa-chevron-right"></i> </button>
+      <button class="lightbox-section__btn-right" aria-label="previous view"><span class="fas fa-chevron-right" role="button"></span> </button>
     </section>
     <script src="./scripts/API/Api.js"></script>
     <script src="./scripts/factories/MediaFactory.js"></script>

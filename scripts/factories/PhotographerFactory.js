@@ -46,7 +46,7 @@ class PhotographerFactory{
 		const img= document.createElement('img')
 		img.classList.add('photograph-header__img')
 		img.setAttribute('src', this.picture)
-		img.setAttribute('alt', this.name)
+		img.setAttribute('alt', '')
 		return (img)
 	}
 }

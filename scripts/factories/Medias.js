@@ -14,14 +14,14 @@ class Medias{
 		const mediaDisplay= new MediaFactory(this.media, name)
 		const factory=mediaDisplay.display()
 		if(this.media.video != undefined){
-			play.innerHTML='<i class="far fa-play-circle"></i>'
+			play.innerHTML='<span class="far fa-play-circle"></span>'
 			play.classList.add('media-article__play')
 			link.appendChild(play)
 		}
 		link.appendChild(factory)
 		const p= document.createElement('p')
 		p.classList.add('media-article__heading')
-		p.innerHTML = this.media.title + '<span>' +this.media.likes+ '<i class="far fa-heart media-article__heading__like" aria-label="likes" data-value='+this.media.likes+'></i></span>'
+		p.innerHTML = this.media.title + '<span>' +this.media.likes+ '<span class="far fa-heart media-article__heading__like" aria-label="likes" data-value='+this.media.likes+'></span></span>'
 		article.appendChild(link)
 		article.appendChild(p)
 		return (article)
