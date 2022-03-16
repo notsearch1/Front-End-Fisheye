@@ -3,7 +3,7 @@
 /* eslint-disable no-undef */
 class Index{
 	constructor(){
-		this.photographersApi = new PhotographersApi('/data/photographers.json')
+		this.photographersApi = new PhotographersApi('./data/photographers.json')
 		this.photographersSection = document.querySelector(".photographer__section")
 
 	}
